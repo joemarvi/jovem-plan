@@ -1,0 +1,68 @@
+.carousel,
+.carrousel-next-matchs {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Garante que o carrossel não exiba scrollbars horizontais */
+
+  .carousel-inner {
+    display: flex;
+    flex-wrap: nowrap; /* Garante que os itens do carrossel fiquem em linha única */
+    transition: transform 0.5s ease; /* Animação suave de transição entre os slides */
+
+    .carousel-item {
+      flex: 0 0 100%; /* Faz com que cada slide ocupe 100% da largura disponível */
+      max-width: 100%; /* Garante que os slides não ultrapassem 100% da largura */
+      position: relative;
+      height: 500px; /* Altura fixa para todos os itens do carrossel */
+
+      img {
+        width: 100%;
+        height: 100%; /* Altura 100% para preencher o item do carrossel */
+        object-fit: cover; /* Mantém a proporção e corta a imagem se necessário */
+      }
+
+      .carousel-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: white;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.5);
+
+        .banner-title {
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 10px;
+          text-align: left;
+        }
+
+        .banner-subtitle {
+          font-size: 1rem;
+          float: left;
+          text-decoration: none;
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+  }
+}
+
+.carousel-control-prev, .carousel-control-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.966);
+  text-align: center;
+  background-color: none;
+  border: 0;
+  opacity: 1;
+  transition: opacity 0.15s ease;
+  scale: (2);
+}

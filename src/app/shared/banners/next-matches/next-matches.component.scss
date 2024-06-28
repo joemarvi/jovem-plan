@@ -1,0 +1,13 @@
+#carouselExampleIndicators {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carrousel-next-matchs {
+  .carousel-inner {
+    .carousel-item {
+      height: 500px; /* Altura fixa para todos os itens do carrossel de next-matchs */
+    }
+  }
+}

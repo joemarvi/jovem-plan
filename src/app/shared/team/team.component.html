@@ -1,0 +1,25 @@
+<div class="container-fluid mt-5">
+  <h1>Elenco</h1>
+</div>
+
+<section class="team">
+  <div class="container-fluid">
+    <div class="slider-wrap">
+      <div class="slider-main" #sliderMain>
+        <div class="item" *ngFor="let player of players">
+          <mat-card>
+            <h2>{{ player.number }}</h2>
+            <img [src]="player.image" alt="">
+            <mat-card-title>{{ player.name }}</mat-card-title>
+            <mat-card-subtitle>{{ player.position }}</mat-card-subtitle>
+          </mat-card>
+        </div>
+      </div>
+      <div class="button-area">
+        <button type="button" class="prev" (click)="scrollPrev()">Prev</button>
+        <button type="button" class="next" (click)="scrollNext()">Next</button>
+      </div>
+    </div>
+    </div>
+</section>
+

@@ -1,0 +1,20 @@
+<div class="slider-social">
+  <div class="row" *ngIf="!loading && !error">
+    <div class="col" *ngFor="let post of posts">
+      <mat-card>
+        <img mat-card-image [src]="post.media_url" alt="Post image">
+        <mat-card-title>{{ post.caption }}</mat-card-title>
+        <mat-card-subtitle>{{ post.media_type }}</mat-card-subtitle>
+        <mat-card-content>
+          <p>{{ post.caption }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <mat-icon><i class="fas fa-heart"></i> {{ post.like_count }}</mat-icon>
+          <mat-icon><i class="fas fa-comment"></i> {{ post.comments_count }}</mat-icon>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="error">{{ error }}</div>
+</div>

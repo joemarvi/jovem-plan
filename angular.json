@@ -52,9 +52,14 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+                "./node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -82,6 +87,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "buildTarget": "jovem-plan:build:production"
@@ -112,6 +120,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -119,5 +128,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "558f36cd-9366-47fe-9cc9-1f47dccf6c89"
   }
 }

@@ -9,7 +9,7 @@ app.use(cors());
 
 app.get('/instagram-posts', async (req, res) => {
   try {
-    const accessToken = 'IGQWRPZAGJ5UkhOcE5oM0hpS1NsTHVnWEo4X2txZAzM3eXExUE5XdDIyOHBidDRPMVFLSWRkUnRSa0VuZAWFJRUszRDJXS3B2ekxNTVFnNWxRaktMNnZA3YnY5TDZAhNTEtSjNKcGRFTW5QcW9aS1FGU2ZAhSExCYzlvdjgZD';
+    const accessToken = 'IGQWRQN1FHYjVVWFp3VzAyb09qYXBHSDA2X0ZAQNTFueThIR081VUgtWTkxdVBnc3pmcnRXcHhGemdoSmxxX18xemdZAdWZAuWjBIanBlNnlvMnZABcFUtUW9oWW9RYzJyZAXR4S2hjUllUMlJYRThMQ0E4MlVFazRZAaTAZD';
     const userId = '389473287476649';
 
     if (!accessToken || !userId) {

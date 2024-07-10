@@ -1,0 +1,316 @@
+.container-search {
+  margin-top: 100px;
+  padding: 0;
+  overflow: hidden;
+
+  .form-control {
+    border-color: #ee6001;
+    font-size: 14px;
+    font-weight: 300;
+
+    &:active {
+      border-color: #df6412;
+    }
+    &:focus {
+      border-color: #df6412;
+      box-shadow: none;
+    }
+
+  }
+
+  .btn {
+    border-color: orange;
+    margin-right: 24px;
+
+    i {
+      color: #df6412;
+    }
+
+    &:hover {
+      background-color:#fe6a01;
+
+      i {
+        color: #ffffff;
+      }
+
+    }
+  }
+}
+
+.title-news {
+  margin-left: 36px;
+}
+
+.news {
+  margin: 0;
+
+  h1 {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-left: 36px;
+  }
+
+  .slider-wrap {
+    margin-top: -40px;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+  }
+
+  .slider-main {
+    display: flex;
+    transition: scroll-left 0.5s ease-in-out;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    overflow: hidden;
+
+    h5 {
+      font-size: 22px;
+      font-weight: 400;
+      color: #fe6a01;
+    }
+
+    .item {
+      width: calc(100% / 3 - 24px); // Calcula o width para 3 itens por linha
+      margin: 0 12px;
+      flex: 0 0 auto;
+      height: auto;
+      margin-bottom: 8px;
+    }
+  }
+
+  mat-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 0; // Remove padding
+    border-bottom: 1px solid #fdddc61c;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.24);
+
+    .image-container {
+      width: 100%;
+      position: relative;
+      border-bottom: 5px solid rgb(255, 102, 0);
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.24);
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; // Ajusta a imagem para cobrir o contêiner
+        object-position: center center; // Centraliza a imagem para evitar corte no topo
+      }
+    }
+
+    .card-content {
+      padding: 16px;
+    }
+
+    h5 {
+      margin-top: 16px;
+    }
+
+    .footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between; // Alinha os itens ao final do espaço disponível
+      align-items: center;
+
+      mat-card-subtitle {
+        margin: 0; // Remove margem extra do subtítulo para ajuste fino
+      }
+
+      button {
+        margin-left: 8px; // Ajusta o espaçamento entre o subtítulo e o botão
+      }
+    }
+
+    // Ajuste para o título ficar em uma linha
+    mat-card-title {
+      margin-top: -12px; // Ajuste o valor conforme necessário
+      text-align: left;
+      font-size: 14px;
+      font-family: 'ibm-plex-sansmedium', sans-serif;
+      color: rgba(0, 0, 0, 0.781);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 100%;
+      display: block;
+
+      &:hover {
+        font-weight: 600;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  mat-card-subtitle {
+    margin-top: 8px; // Ajuste o valor conforme necessário
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.705);
+  }
+
+  .button-area {
+    position: absolute;
+    width: 100%;
+    top: 38%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+
+  .prev,
+  .next {
+    background-color: #000000a1;
+    border: none;
+    padding: 30px; // Ajuste o tamanho do botão conforme necessário
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 16px; // Ajuste o tamanho da fonte conforme necessário
+
+    i {
+      font-size: 20px; // Ajuste o tamanho do ícone conforme necessário
+    }
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .btn {
+      width: 10rem;
+      margin-right: 8px;
+      border: none;
+      font-size: 12px;
+      font-weight: 500;
+      font-family: "IBM", sans-serif;
+      text-transform: uppercase;
+      color: #ffffff;
+      background-color: #df6412;
+
+      &:hover {
+        color: #ffffff;
+        background-color: #D3A01F;
+      }
+    }
+}
+
+.container-fluid {
+  padding: 24px;
+  h1 {
+    text-transform: uppercase;
+  }
+}
+
+.all-news {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .col-sm-3 {
+    width: calc(25% - 16px);
+    margin-bottom: 24px;
+  }
+
+  mat-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0; // Remove padding
+    border-bottom: 1px solid #fdddc61c;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.24);
+    overflow: hidden;
+
+    .image-container {
+      width: 100%;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; // Ajusta a imagem para cobrir o contêiner
+        object-position: center center; // Centraliza a imagem para evitar corte no topo
+      }
+    }
+
+    .card-content {
+      padding: 16px;
+
+      h5 {
+        margin-top: 8px;
+        font-size: 18px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      mat-card-title {
+        margin-top: -12px; // Ajuste o valor conforme necessário
+        text-align: left;
+        font-size: 14px;
+        font-family: 'ibm-plex-sansmedium', sans-serif;
+        margin-bottom: 16px;
+        color: rgba(0, 0, 0, 0.781);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 100%;
+        display: block;
+      }
+    }
+
+    .footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between; // Alinha os itens ao final do espaço disponível
+      align-items: center;
+
+      mat-card-subtitle {
+        margin: 0; // Remove margem extra do subtítulo para ajuste fino
+      }
+
+      button {
+        width: 10rem;
+        margin-right: 8px;
+        border: none;
+        font-size: 12px;
+        font-weight: 500;
+        font-family: "IBM", sans-serif;
+        text-transform: uppercase;
+        color: #ffffff;
+        background-color: #df6412;
+
+        &:hover {
+          color: #ffffff;
+          background-color: #D3A01F;
+        }
+      }
+    }
+  }
+}
+
+.btn-news {
+  margin: auto;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  color: #ffffff;
+  background-color: #D3A01F;
+
+  &:hover {
+    background-color: #df6412;
+  }
+}

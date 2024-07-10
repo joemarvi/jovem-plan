@@ -1,0 +1,82 @@
+<div class="spacer"></div>
+<div class="competitions-container" *ngFor="let competitionData of competitions; let i = index">
+  <h1 class="competition-title">{{competitionData.competition}}</h1>
+  <div class="container-fluid">
+    <div class="row align-items-start">
+      <div class="col-lg-6">
+        <div class="next-matches">
+          <div class="card-slider">
+            <button class="slider-button prev" (click)="prevMatch(i)" [disabled]="currentMatchesIndex[i] === 0"><i
+              class="fa-solid fa-chevron-left"></i></button>
+            <div class="card" *ngIf="currentMatchesIndex[i] < competitionData.matches.length && currentMatchesIndex[i] >= 0">
+              <div class="card-header">
+                <mat-card-subtitle>Próximos Jogos</mat-card-subtitle>
+                <h2 class="competition-title mt-2">{{ competitionData.matches[currentMatchesIndex[i]].competition }}</h2>
+              </div>
+              <div class="card-body">
+                <div class="match-info">
+                  <div class="match-date">
+                    <i class="fa-regular fa-calendar"></i>
+                    {{ competitionData.matches[currentMatchesIndex[i]].date | date: 'EEEE, d MMMM, y' }}
+                  </div>
+                  <div class="team-logos">
+                    <img src="{{ competitionData.matches[currentMatchesIndex[i]].homeLogo }}" alt="Escudo do time">
+                    <span> Vs </span>
+                    <img src="{{ competitionData.matches[currentMatchesIndex[i]].awayLogo }}" alt="Escudo adversário">
+                  </div>
+                  <div class="match-details mt-3">
+                    <div class="match-time-location">
+                      <i class="fa-solid fa-clock"></i>
+                      {{ competitionData.matches[currentMatchesIndex[i]].timeLocation }}
+                    </div>
+                    <div class="match-more-details">
+                      {{ competitionData.matches[currentMatchesIndex[i]].details }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="slider-button next" (click)="nextMatch(i)" [disabled]="currentMatchesIndex[i] === competitionData.matches.length - 1"><i
+            class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="classification" *ngIf="currentMatchesIndex[i] < competitionData.matches.length && currentMatchesIndex[i] >= 0">
+          <h2><i class="fa-solid fa-table-list"></i> Classificação: <b>{{competitionData.numberRodada}}</b></h2>
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 5px;"></th>
+                <th style="text-align: left; border-right: 1px solid rgba(165, 165, 165, 0.774);">Classificação</th>
+                <th>PT</th>
+                <th>J</th>
+                <th>V</th>
+                <th>E</th>
+                <th>D</th>
+                <th>GP</th>
+                <th>GC</th>
+                <th>SG</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let team of competitionData.classification">
+                <td style="color: rgb(255, 123, 0); font-weight: bold;">{{ team.position }}</td>
+                <td style="text-align: left;">{{ team.team }}</td>
+                <td style="font-weight: 700; background-color: rgba(247, 227, 215, 0.349); border-left: 1px solid rgba(165, 165, 165, 0.774);">{{ team.pt }}</td>
+                <td>{{ team.j }}</td>
+                <td style="background-color: rgba(247, 227, 215, 0.349);">{{ team.v }}</td>
+                <td>{{ team.e }}</td>
+                <td style="background-color: rgba(247, 227, 215, 0.349);">{{ team.d }}</td>
+                <td>{{ team.gp }}</td>
+                <td style="background-color: rgba(247, 227, 215, 0.349);">{{ team.gc }}</td>
+                <td>{{ team.sg }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,13 +1,47 @@
 #carouselExampleIndicators {
+  margin-top: -10px;
+  box-shadow: 0 -100px 100px rgba(254, 106, 1, 0.63); /* Ajuste a altura e o desfoque conforme necessário */
   position: relative;
   width: 100%;
   overflow: hidden;
+  z-index: 0; /* Certifique-se de que o z-index seja menor que o do .carousel-caption */
 }
 
 .carrousel-next-matchs {
   .carousel-inner {
     .carousel-item {
-      height: 500px; /* Altura fixa para todos os itens do carrossel de next-matchs */
+      height: auto; /* Altura fixa para todos os itens do carrossel de next-matchs */
     }
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5%; /* Ajuste a largura conforme necessário */
+    color: rgba(255, 255, 255, 0.582);
+    text-align: center;
+    // background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    border: 0;
+    opacity: 1;
+    transition: opacity 0.15s ease;
+
+    i {
+      font-size: 2rem; /* Tamanho do ícone */
+      color: white; /* Cor do ícone */
+    }
+  }
+
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
   }
 }

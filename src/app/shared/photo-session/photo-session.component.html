@@ -1,0 +1,23 @@
+<div class="container-fluid mb-5">
+  <h1>Galeria Jovem Plan</h1>
+  <div class="controls">
+    <select [(ngModel)]="selectedCompetition" (change)="filterPhotos()">
+      <option *ngFor="let competition of competitions" [value]="competition">{{ competition }}</option>
+    </select>
+    <div class="search-container">
+      <input type="text" placeholder="Pesquisar..." [(ngModel)]="searchTerm" (input)="filterPhotos()">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </div>
+  <mat-card-title>
+    {{ selectedCompetition }}
+  </mat-card-title>
+  <div class="gallery mb-5">
+    <div class="gallery-item" *ngFor="let photo of displayedPhotos">
+      <img [src]="photo.url" [alt]="photo.title">
+      <div class="caption">{{ photo.title }}</div>
+      <div class="date">{{ photo.date }}</div>
+    </div>
+  </div>
+  <button (click)="loadMorePhotos()"><i class="fa-solid fa-plus"></i> Carregar mais fotos</button>
+</div>

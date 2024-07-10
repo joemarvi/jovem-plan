@@ -1,0 +1,75 @@
+<div class="container-search">
+  <div class="row align-items-center justify-content-between">
+    <div class="col-sm-6 d-flex justify-content-center">
+    </div>
+    <div class="col-sm-6 d-flex justify-content-end">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2 search-input" type="search"
+          placeholder="Pesquisar por" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit"><i
+            class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<section class="news mt-4">
+  <h1>Destaques</h1>
+  <div class="container-fluid">
+    <div class="slider-wrap">
+      <div class="slider-main" #sliderMain>
+        <div class="item" *ngFor="let new of news">
+          <mat-card>
+            <div class="image-container">
+              <img [src]="new.image" alt="News Image">
+            </div>
+            <div class="card-content">
+              <h5>{{ new.categoria }}</h5>
+              <a routerLink='/'><mat-card-title>{{ new.title
+                  }}</mat-card-title></a>
+              <div class="footer mt-4 mb-2">
+                <mat-card-subtitle>{{ new.dataNews | date: 'dd/MM/yyyy'
+                  }}</mat-card-subtitle>
+                <button mat-button class="btn">Continue lendo</button>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+      <div class="button-area">
+        <button type="button" class="prev" (click)="scrollPrev()"><i
+            class="fa-solid fa-chevron-left"></i></button>
+        <button type="button" class="next" (click)="scrollNext()"><i
+            class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container-fluid">
+  <h1>Notícias</h1>
+  <div class="all-news">
+    <div class="row align-items-center">
+      <div class="col-sm-3" *ngFor="let new of news">
+        <mat-card>
+          <div class="image-container">
+            <img [src]="new.image" alt="News Image">
+          </div>
+          <div class="card-content">
+            <h5>{{ new.categoria }}</h5>
+            <a routerLink='/'><mat-card-title>{{ new.title
+                }}</mat-card-title></a>
+            <div class="footer mt-4 mb-2">
+              <mat-card-subtitle>{{ new.dataNews | date: 'dd/MM/yyyy'
+                }}</mat-card-subtitle>
+              <button mat-raised-button class="btn">Continue lendo</button>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+    <mat-card-actions>
+      <button mat-raised-button class="btn-news mt-5">Mais notícias</button>
+    </mat-card-actions>
+  </div>
+</div>

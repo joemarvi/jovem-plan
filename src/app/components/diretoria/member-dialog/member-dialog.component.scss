@@ -1,0 +1,33 @@
+.dialog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dialog-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.member-photo {
+  width: 250px; /* Adjust the width to your desired size */
+  height: auto;
+  border-radius: 8px;
+}
+
+.member-info {
+  flex: 1;
+}
+
+h2 {
+  margin: 0;
+  font-family: "Fjalla One", sans-serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}

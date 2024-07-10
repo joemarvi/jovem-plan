@@ -1,0 +1,12 @@
+<div class="container-fluid mt-5">
+  <div class="img-header">
+    <img src="../../../assets/banners/pages-banner/banner-jp-page-gallery.png" alt="">
+  </div>
+  <div class="gallery-container">
+    <div class="gallery-row">
+      <mat-card *ngFor="let photo of photoRows[0]" class="photo-card">
+        <img mat-card-image [src]="photo.src" [alt]="photo.alt">
+      </mat-card>
+    </div>
+  </div>
+</div>

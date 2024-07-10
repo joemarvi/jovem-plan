@@ -1,0 +1,61 @@
+.container-fluid {
+  width: 100%;
+  overflow: hidden;
+
+  .img-header {
+    width: 100%;
+    height: auto;
+    /* Ajuste a altura conforme necessário */
+    background-image: url(../../../assets/banners/pages-banner/banner-jp-page-gallery.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* Alinha o conteúdo à direita */
+  padding: 20px;
+  margin-top: -380px;
+  /* Ajuste para o posicionamento desejado */
+
+  .gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    /* Alinha os cards à direita */
+    margin-bottom: 20px;
+    gap: 15px;
+    /* Espaçamento entre os cards */
+
+    .photo-card {
+      width: calc(30%px);/* Ajuste para 3 colunas com espaçamento entre elas */
+      height: 320px;
+      /* Ajuste a altura dos cards conforme necessário */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      transition: transform 0.3s;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        object-fit: cover;
+        /* Garante que a imagem ocupe todo o espaço do card */
+      }
+
+      &:hover {
+        transform: scale(1.5);
+        box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.651);
+      }
+    }
+  }
+
+}

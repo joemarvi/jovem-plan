@@ -8,7 +8,7 @@ import { catchError } from 'rxjs/operators';
 })
 export class InstagramService {
   private apiUrl = 'http://localhost:3000/instagram-posts';
-  private accessToken = 'IGQWRPZAWJZAY1QxaElBRU5JTmNqa2JPOTVGaC1Yb3hMUjV5SXllaUJOeHpZAa19GaUkyMDVmMy1wREI2LWhaaVVpa3puV0otUDJPWGNGVmtmLThKQ0lOaXhaM3lIWnBHYTlVZAmIxdS1IdmpwTWdqLUdJcmV6dmZAfUGcZD';
+  private accessToken = 'IGQWRQN1FHYjVVWFp3VzAyb09qYXBHSDA2X0ZAQNTFueThIR081VUgtWTkxdVBnc3pmcnRXcHhGemdoSmxxX18xemdZAdWZAuWjBIanBlNnlvMnZABcFUtUW9oWW9RYzJyZAXR4S2hjUllUMlJYRThMQ0E4MlVFazRZAaTAZD';
 
   constructor(private http: HttpClient) { }
 

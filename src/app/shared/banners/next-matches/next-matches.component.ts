@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-next-matches',
@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
   templateUrl: './next-matches.component.html',
   styleUrl: './next-matches.component.scss'
 })
-export class NextMatchesComponent {
+export class NextMatchesComponent  implements OnInit {
+
+  ngOnInit(): void {
+
+  }
 
 }

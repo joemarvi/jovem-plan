@@ -1,0 +1,115 @@
+.container-fluid {
+  padding: 0; /* Remove o padding para garantir que a imagem ocupe toda a largura */
+
+  h1 {
+    margin-top: 160px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FE6A01;
+    font-weight: bolder;
+  }
+}
+
+.container {
+  img {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.campaign-section {
+  padding: 40px 20px;
+
+  .campaign {
+    margin-bottom: 40px;
+
+    h2 {
+      margin-top: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-size: 18px;
+      font-family: "IBM", sans-serif;
+      height: 100%;
+      width: 100%;
+      display: flex;
+
+      text-align: center;
+      line-height: 18px;
+      z-index: 1000;
+      transition: 300ms ease-in-out;
+
+      color: #523321; /* Cor padrão do site */
+
+      i {
+        margin-right: 8px;
+        color: #146EBE;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      text-align: justify;
+      color: #333;
+    }
+
+    mat-card-title {
+      text-transform: capitalize;
+      font-family: "Jost", sans-serif;
+      color: #4d4d4d;
+    }
+
+    mat-card-content {
+      margin-top: 8px;
+    }
+
+    .icon-text {
+      display: flex;
+      font-size: 14px;
+      align-items: center;
+      font-family: "Jost", sans-serif;
+
+      i {
+        margin-right: 8px; // Reduza a margem conforme necessário
+        scale: 1.5;
+      }
+    }
+
+    h4 {
+      text-transform: uppercase;
+      color: orange;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 8px; /* Bordas arredondadas para um visual mais moderno */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar um efeito mais profissional */
+    }
+
+    .btn {
+      width: 13rem;
+      margin-top: 16px;
+      border: none;
+      font-size: 14px;
+      font-weight: 500;
+      font-family: "IBM", sans-serif;
+      text-transform: uppercase;
+      color: #ffffff;
+      background-color: #df6412;
+
+      i {
+        margin-right: 8px;
+      }
+
+      &:hover {
+        color: #ffffff;
+        background-color: #D3A01F;
+      }
+    }
+  }
+}

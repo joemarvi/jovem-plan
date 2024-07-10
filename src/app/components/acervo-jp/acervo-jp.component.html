@@ -1,0 +1,44 @@
+<mat-accordion>
+
+  <!-- Galeria de Memórias Jovem Plan -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Memórias Jovem Plan
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="gallery">
+      <mat-card *ngFor="let photo of photos" class="photo-card">
+        <img mat-card-image [src]="photo.url" alt="{{photo.description}}">
+      </mat-card>
+    </div>
+  </mat-expansion-panel>
+
+  <!-- Breve texto explicando cada foto -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Explicação das Fotos
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div *ngFor="let photo of photos">
+      <h3>{{photo.title}}</h3>
+      <p>{{photo.description}}</p>
+    </div>
+  </mat-expansion-panel>
+
+  <!-- Momentos Mais Marcantes -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Momentos Mais Marcantes
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ul>
+      <li *ngFor="let momento of momentos">
+        {{momento}}
+      </li>
+    </ul>
+  </mat-expansion-panel>
+
+</mat-accordion>

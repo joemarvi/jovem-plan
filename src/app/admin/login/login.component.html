@@ -1,0 +1,36 @@
+<div class="container-fluid d-flex justify-content-center align-items-center vh-100">
+  <div class="row align-items-center justify-content-center w-100 h-100">
+    <div class="col-sm-6 d-flex justify-content-center align-items-center">
+      <mat-card class="login-card">
+        <div class="logo-container">
+          <img src="../../../assets/logo/logo-jovemPlan-new.png" alt="Logo Jovem Plan" class="logo">
+        </div>
+        <mat-card-title>Sócio Jovem Plan</mat-card-title>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="form-row">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>E-mail</mat-label>
+              <input matInput type="email" formControlName="email" placeholder="Informe seu email" required>
+            </mat-form-field>
+          </div>
+
+          <div class="form-row">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Password</mat-label>
+              <input matInput type="password" formControlName="password" placeholder="Informe sua senha" required>
+            </mat-form-field>
+          </div>
+
+          <div class="form-row password-recovery">
+            <a routerLink="/password-recovery">Esqueceu a senha?</a>
+          </div>
+
+          <mat-card-actions class="actions">
+            <button mat-raised-button color="primary" type="submit">Continuar</button>
+            <button mat-raised-button class="cancel" (click)="onCancel()" type="button">Cancelar</button>
+          </mat-card-actions>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

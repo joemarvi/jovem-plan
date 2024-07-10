@@ -1,0 +1,33 @@
+<div class="resultados-container">
+  <div class="spacer"></div>
+  <div class="competition-container"
+    *ngFor="let competition of competitionResults; let i = index">
+    <div class="competition-header">
+      <div class="competition-name"><h3>{{ competition.competition }}</h3></div>
+    </div>
+    <div class="results-table">
+      <mat-card [ngClass]="'competition-bg-' + i">
+        <table>
+          <tbody>
+            <tr *ngFor="let result of competition.results">
+              <td class="day">{{ getDay(result.date) }}</td>
+              <td class="date" [innerHTML]="formatDate(result.date)"></td>
+              <td class="match">
+                <div class="team">
+                  <span>{{ result.homeTeam.substring(0, 3).toUpperCase() }}</span>
+                  <img src="{{ result.homeLogo }}" alt="{{ result.homeTeam.substring(0, 3).toUpperCase() }}">
+                </div>
+                <span class="score">{{ result.score }}</span>
+                <div class="team">
+                  <img src="{{ result.awayLogo }}" alt="{{ result.awayTeam.substring(0, 3).toUpperCase() }}">
+                  <span>{{ result.awayTeam.substring(0, 3).toUpperCase() }}</span>
+                </div>
+              </td>
+              <td class="details"> <b>{{ result.competition }}</b> <br><i class="fa-solid fa-calendar"></i>{{ formatDateTime(result.date) }} <br> <i class="fa-solid fa-location-dot"></i>{{ result.location }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-card>
+    </div>
+  </div>
+</div>

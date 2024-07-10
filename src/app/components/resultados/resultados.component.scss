@@ -1,0 +1,168 @@
+.spacer {
+  margin-top: 60px;
+}
+
+.resultados-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  font-family: "Open Sans", Helvetica, sans-serif;
+
+  .competition-container {
+    margin-bottom: 40px;
+    border-radius: 8px;
+
+    .competition-header {
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      font-size: 18px;
+
+      .competition-name {
+        h3 {
+          font-weight: 900;
+          font-family: "Open Sans", Helvetica, sans-serif;
+          font-size: 22px;
+          margin-top: 20px;
+          text-transform: uppercase;
+          line-height: 24px;
+          color:#222222;
+        }
+      }
+    }
+
+    mat-card {
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.24);
+    }
+
+    .results-table {
+      table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+
+        th,
+        td {
+          padding: 10px;
+          text-align: center;
+          border-left: none;
+          /* Remove borda esquerda */
+          border-right: none;
+          /* Remove borda direita */
+        }
+
+        th {
+          font-weight: bold;
+          color: #333;
+        }
+
+        td {
+          color: #666;
+          vertical-align: middle;
+        }
+
+        tr:nth-child(even) {
+          background-color: #ffffff;
+        }
+
+        .day {
+          text-align: center;
+          font-size: 24px;
+          font-family: "Open Sans", Helvetica, sans-serif;
+          font-weight: 300;
+          width: 5%;
+          color: #0a0400;
+        }
+
+        .date {
+          text-transform: capitalize;
+          text-align: left;
+          width: 20%;
+        }
+
+        .match {
+          width: 40%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          padding: 0 10px;
+          white-space: nowrap;
+
+          .team {
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            font-weight: 300;
+
+            img {
+              width: 90px;
+              height: 90px;
+              margin: 0 5px;
+            }
+
+            span {
+              font-size: 14px;
+              text-transform: capitalize;
+              font-weight: 300;
+              font-family: "Open Sans", Helvetica, sans-serif;
+            }
+          }
+
+          .score {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 6px;
+            margin: 0 10px;
+            color: #0a0400;
+          }
+        }
+
+        .details {
+          width: 30%;
+          text-align: left;
+          font-weight: 300;
+          color: rgb(43, 43, 43);
+
+          b {
+            font-weight: 400;
+            color: #0a0400;
+          }
+
+          i {
+            // margin-left: -1px;
+            margin: 0 8px 0 -1px;
+            font-size: 1rem;
+            color: #0a0400;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Estilos de fundo específicos para cada competição */
+.competition-bg-0 {
+  background-color: #e7e7e7; /* Azul claro */
+}
+
+.competition-bg-1 {
+  color: #e7e7e7;
+  background-color: #fca62427; /* Amarelo */
+}
+
+.competition-bg-2 {
+  background-color: #ffffff; /* Laranja claro */
+}
+
+.competition-bg-3 {
+  background-color: #ffffff; /* Verde claro */
+}
+
+/* Adicione mais estilos conforme necessário para outras competições */

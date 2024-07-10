@@ -1,0 +1,106 @@
+.container-fluid {
+  padding: 0;
+  margin: 0;
+  background-color: #fe6a01;
+  color: white;
+
+  .footer-page {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  // Allow wrapping for better responsiveness
+    text-align: left;
+
+    .footer-column {
+      flex: 1;
+      padding: 10px;
+
+      p {
+        text-align: left;
+        color: rgba(255, 255, 255, 0.712);
+      }
+
+      i {
+        padding: 5px;
+        transform: scale(1.2);
+        color: rgb(0, 0, 0);
+        margin-right: 10px; // Espaço entre o ícone e o texto
+
+        &:hover {
+          transform: scale(1.5);
+          color: rgba(209, 209, 209, 0.726);
+        }
+      }
+
+      b {
+        color: rgba(240, 248, 255, 0.733);
+      }
+
+      h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: Canva Sans, Noto Sans Variable, Noto Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+        color: rgba(0, 0, 0, 0.767);
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 5px;
+
+          a {
+            color: rgba(255, 255, 255, 0.63);
+            text-decoration: none;
+            transition: color 0.3s;
+
+            &:hover {
+              font-weight: 600;
+              color: rgba(0, 0, 0, 0.7);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;  // Espaço entre o título e os ícones sociais
+
+    a {
+      color: rgb(0, 0, 0);
+      font-size: 1.5rem;
+      margin-right: 10px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+
+  mat-card-title {
+    margin: auto;
+    text-align: center;
+    font-size: 12px;
+    font-family: ibm_plex_sansmedium, Calibri, sans-serif;
+    text-transform: uppercase;
+    color: rgba(240, 248, 255, 0.527);
+
+    span {
+      margin: 5px;
+      color: black;
+      font-weight: 800;
+    }
+  }
+}

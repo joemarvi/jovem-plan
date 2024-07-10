@@ -1,0 +1,212 @@
+.spacer {
+  margin-top: 80px;
+}
+
+.competitions-container {
+  margin-bottom: 2rem;
+  font-family: "Nunito Sans", sans-serif;
+
+  h1 {
+    padding: 30px 42px 0px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: "Nunito Sans", sans-serif;
+    color: #ff6a00;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #707070;
+    margin-bottom: 1rem;
+  }
+
+  .next-matches,
+  .classification {
+    padding: 1rem;
+  }
+
+  .card-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    .slider-button {
+      position: absolute;
+      top: 55%;
+      transform: translateY(-50%);
+      background-color: #ff6a00;
+      color: white;
+      border: none;
+      // border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1;
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+
+      &.prev {
+        left: 5px;
+      }
+
+      &.next {
+        right: 5px;
+      }
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      padding: 1rem;
+      margin: 0 1rem;
+      width: 100%;
+      max-width: 700px;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.24);
+
+
+      .card-header {
+        text-align: center;
+        background-color: #ff6a00;
+        vertical-align: middle;
+
+        mat-card-subtitle {
+          font-size: 1.3rem;
+          font-weight: lighter;
+          color: #f4f4f4d8;
+          text-transform: uppercase;
+          font-family: "Nunito Sans", sans-serif;
+        }
+
+        .competition-title {
+          margin-bottom: 8px;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 30px;
+          text-transform: capitalize;
+          font-family: "Nunito Sans", sans-serif;
+          color: #181717;
+
+        }
+      }
+
+      .card-body {
+        .match-info {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-family: "Nunito Sans", sans-serif;
+
+          .match-date {
+            text-transform: capitalize;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: #0000008e;
+
+            i {
+              padding: 8px;
+              scale: (1.5);
+              color: #ff6a00;
+            }
+          }
+
+          .team-logos {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+
+            img {
+              width: 100px;
+              height: 100px;
+              margin: 0 0.5rem;
+            }
+
+            span {
+              font-size: 1.5rem;
+            }
+          }
+
+          .match-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 18px;
+
+            .match-time-location,
+            .match-more-details {
+              margin-bottom: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .classification {
+
+    h2 {
+      margin-top: -70px;
+      text-align: left;
+      text-transform:none;
+      font-size: 18px;
+      color: #5c5b5b;
+      font-weight: lighter;
+
+      i {
+        padding: 8px;
+        scale: (1.5);
+        color: #494949;
+      }
+    }
+
+   table {
+      width: 100%;
+      border-collapse: collapse; /* Remove espaços entre as células */
+      margin-top: 1rem;
+      border-bottom: 1px solid rgb(189, 186, 186);
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.24);
+      font-family: "Nunito Sans", sans-serif;
+
+      th,
+      td {
+        border-top: 1px solid #3838383f; /* Borda superior para todas as células */
+        padding: 0.5rem;
+        text-align: center;
+        font-weight: lighter;
+        font-size: 16px;
+        color: #707070;
+      }
+
+      th:first-child,
+      td:first-child {
+        border-left: none; /* Remove borda à esquerda da primeira coluna */
+      }
+
+      th:last-child,
+      td:last-child {
+        border-right: none; /* Remove borda à direita da última coluna */
+      }
+
+      td.team {
+        text-align: left; /* Ajusta o alinhamento do texto da coluna do time */
+      }
+
+      th {
+        text-transform: uppercase;
+        background-color: #ffffff;
+      }
+    }
+  }
+}

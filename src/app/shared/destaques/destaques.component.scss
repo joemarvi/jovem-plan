@@ -63,7 +63,7 @@ h1 {
 .midias-banner {
   margin-top: -30px;
   overflow: hidden;
-  background-color: #fe6a01;
+  background-color: #F66D07;
 
   h5 {
     padding: 14px;
@@ -98,7 +98,7 @@ h1 {
 
   mat-card-title {
     font-size: 36px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-family: ibm_plex_sansmedium, Calibri, sans-serif;
     font-weight: bold;
     padding: 16px;
@@ -115,7 +115,7 @@ h1 {
 
   button {
     margin: 16px;
-    padding: 24px;
+    padding: 20px;
     font-size: 24px;
     line-height: 30px;
     font-family: ibm_plex_sansmedium, Calibri, sans-serif;

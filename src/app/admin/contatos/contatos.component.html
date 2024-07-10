@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="fale-conosco">
+    <div class="contact-form">
+      <h2>Fale Conosco</h2>
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline">
+          <mat-label>Nome Completo</mat-label>
+          <input matInput type="text" formControlName="name" placeholder="Informe seu nome" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email" placeholder="Digite seu email">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Telefone</mat-label>
+          <input matInput type="tel" formControlName="phone" placeholder="Digite seu telefone">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Deixe aqui sua mensagem</mat-label>
+          <textarea matInput formControlName="message" placeholder="Digite sua mensagem"></textarea>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Registrar Mensagem</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <h2>Informações de Contato</h2>
+      <hr>
+      <p><strong><i class="fa-solid fa-location-dot"></i></strong> Rua Exemplo, 123, Cidade, Estado</p>
+      <p><strong><i class="fa-solid fa-phone"></i></strong> (61) 1234-5678</p>
+      <p><strong><i class="fa-brands fa-whatsapp"></i></strong> (61) 98765-4321</p>
+      <p><strong><i class="fa-regular fa-envelope"></i></strong> contato&#64;jovemplan.com.br</p>
+
+      <div class="social-icons mt-4">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -25,6 +25,10 @@
             <a routerLink="/password-recovery">Esqueceu a senha?</a>
           </div>
 
+          <div *ngIf="errorMessage" class="error-message">
+            {{ errorMessage }}
+          </div>
+
           <mat-card-actions class="actions">
             <button mat-raised-button color="primary" type="submit">Continuar</button>
             <button mat-raised-button class="cancel" (click)="onCancel()" type="button">Cancelar</button>

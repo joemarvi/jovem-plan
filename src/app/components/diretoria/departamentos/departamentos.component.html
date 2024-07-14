@@ -1,0 +1,15 @@
+<div class="departments mb-5">
+  <mat-card *ngFor="let department of departments">
+      <mat-card-title>{{ department.title }}</mat-card-title>
+      <mat-card-content>
+        <p>{{ department.content }}</p>
+        <div class="members">
+          <div *ngFor="let member of department.members">
+            <a (click)="openDialog(member)">
+              <i class="{{ member.icon }}"></i>{{ member.name }}
+            </a>
+          </div>
+        </div>
+      </mat-card-content>
+  </mat-card>
+</div>

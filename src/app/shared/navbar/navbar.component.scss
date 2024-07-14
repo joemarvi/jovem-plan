@@ -16,7 +16,7 @@
   }
 
   &.transparent {
-    background-color: rgba(254, 106, 1, 0.788);
+    background-color: rgba(254, 106, 1, 0.226);
   }
 
   .container-fluid {
@@ -36,11 +36,11 @@
     }
 
     #navbarLogo {
-      width: 100px;
+      width: 90px;
       transition: width 0.8s, transform 0.8s;
 
       &.scrolled {
-        width: 80px;
+        width: 50px;
         transform: scale(0.8);
       }
     }

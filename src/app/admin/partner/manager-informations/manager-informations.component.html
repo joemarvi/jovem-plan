@@ -1,0 +1,121 @@
+<div class="container-fluid">
+  <h5>Fortalecendo Laços. Agregando Valores!</h5>
+  <h1>Cultive essa Família<b>.</b></h1>
+
+  <div class="dashboard-container mt-5 mb-2">
+    <div class="row align-items-start">
+      <div class="col-sm-4">
+        <mat-card>
+          <img class="profile-photo" [src]="informationsPartner.photoUrl" alt="Profile Photo">
+          <mat-card-title>{{ informationsPartner.firstName}} {{informationsPartner.surname}}</mat-card-title>
+          <ul class="informationsList">
+            <li><strong>Plano:</strong> {{ informationsPartner.currentPlan }}<i class="fa-solid fa-star"></i></li>
+            <li><strong>Associado Nº:</strong>{{informationsPartner.numberAssociete}}</li>
+            <li><strong>CPF:</strong> {{ informationsPartner.cpf }}</li>
+            <li><strong>E-mail:</strong> {{ informationsPartner.email }}</li>
+            <li><strong>Telefone:</strong> {{ informationsPartner.phone }}</li>
+            <li><strong>Endereço:</strong> {{ informationsPartner.address }}</li>
+            <li><strong>Complemento:</strong> {{ informationsPartner.complement }}</li>
+            <li><strong>Cidade:</strong> {{ informationsPartner.city }}</li>
+            <li><strong>Estado:</strong> {{ informationsPartner.state }}</li>
+            <li><strong>CEP:</strong> {{ informationsPartner.cep }}</li>
+          </ul>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card>
+      </div>
+      <div class="col-sm-8">
+        <mat-card class="member-plan-card">
+          <mat-card-title><i class="fa-regular fa-pen-to-square"></i>Gerenciar
+            minhas Informações</mat-card-title>
+          <mat-card-content>
+            <div class="member-info">
+              <div class="row align-items-start">
+                <mat-card class="register-partner">
+                  <mat-card-subtitle>Preencha corretamente todos os
+                    dados</mat-card-subtitle>
+                  <form [formGroup]="partnerEditForm" (ngSubmit)="onSubmit()">
+                    <div class="form-row">
+                      <mat-form-field appearance="outline" class="half-width">
+                        <mat-label>Nome</mat-label>
+                        <input matInput type="text" formControlName="name"
+                          placeholder="Informe seu  primeiro nome" required>
+                      </mat-form-field>
+
+                      <mat-form-field appearance="outline" class="half-width">
+                        <mat-label>Sobrenome</mat-label>
+                        <input matInput type="text" formControlName="surname"
+                          placeholder="Informe seu sobrenome" required>
+                      </mat-form-field>
+                    </div>
+
+                    <div class="form-row">
+                      <mat-form-field appearance="outline" class="half-width">
+                        <mat-label>Email</mat-label>
+                        <input matInput type="email" formControlName="email"
+                          placeholder="Informe seu melhor e-mail" required>
+                      </mat-form-field>
+
+                      <mat-form-field appearance="outline" class="half-width">
+                        <mat-label>Telefone</mat-label>
+                        <input matInput type="tel" formControlName="phone"
+                          placeholder="Informe seu telefone" mask="(00) 0000-0000"
+                          required>
+                      </mat-form-field>
+                    </div>
+
+                    <div class="form-row">
+                      <mat-form-field appearance="outline" class="half-width">
+                        <mat-label>Endereço</mat-label>
+                        <input matInput type="text" formControlName="address"
+                          placeholder="Informe seu endereço" required>
+                      </mat-form-field>
+
+                      <mat-form-field appearance="outline" class="half-width">
+                        <mat-label>Complemento</mat-label>
+                        <input matInput type="text" formControlName="complement"
+                          placeholder="Informe o complemento">
+                      </mat-form-field>
+                    </div>
+
+                    <div class="form-row">
+                      <mat-form-field appearance="outline" class="third-width">
+                        <mat-label>Estado</mat-label>
+                        <mat-select formControlName="state" required>
+                          <mat-option *ngFor="let estado of estados"
+                            [value]="estado">{{ estado }}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+
+                      <mat-form-field appearance="outline" class="third-width">
+                        <mat-label>Cidade</mat-label>
+                        <input matInput type="text" formControlName="city"
+                          placeholder="Informe sua cidade" required>
+                      </mat-form-field>
+
+                      <mat-form-field appearance="outline" class="third-width">
+                        <mat-label>CEP</mat-label>
+                        <input matInput type="text" formControlName="cep"
+                          placeholder="Informe seu CEP" required>
+                        <mat-error
+                          *ngIf="partnerEditForm.controls['cep'].hasError('pattern')">CEP
+                          inválido.</mat-error>
+                      </mat-form-field>
+                    </div>
+                    <mat-card-actions>
+                      <button mat-raised-button color="primary"
+                        type="submit">Continuar</button>
+                      <button mat-raised-button class="disabled"
+                        (click)="onCancel()" type="button">Cancelar</button>
+                    </mat-card-actions>
+                  </form>
+                </mat-card>
+              </div>
+            </div>
+            <div class="plan-details">
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,193 @@
+.container-fluid {
+  padding: 8px;
+  background-color: #f5f5f5;
+
+  h5 {
+    padding: 8px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+    word-spacing: 1px;
+    color: #fe6a01;
+  }
+
+  h1 {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 60px;
+
+    b {
+      font-size: 60px;
+      color: #fe6a01;
+    }
+  }
+
+  .dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    background-color: #f5f5f5;
+
+    .member-plan-card {
+      width: 500px;
+      padding: 16px;
+      background-image: url(../../../../assets/logo/logo-jovemPlan-new.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.801);
+        /* Overlay with reduced opacity */
+      }
+
+      mat-card-title {
+        font-family: "Open Sans", "Helvetica Neue";
+        text-align: center;
+        text-transform: uppercase;
+        color: #212121;
+        font-size: 24px;
+        margin-bottom: 16px;
+        position: relative;
+        z-index: 1;
+      }
+
+      mat-card-content {
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    .member-info {
+      font-family: "Open Sans", "Helvetica Neue";
+      display: flex;
+      align-items: center;
+
+      .profile-photo {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        margin-right: 16px;
+      }
+
+      .plan-details {
+        font-family: "Open Sans", "Helvetica Neue";
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 16px;
+
+        i {
+          padding: 0 8px;
+          color: #D3A01F;
+        }
+      }
+    }
+  }
+
+  .title-page {
+    text-align: center;
+    margin-top: 40px;
+
+    h1 {
+      font-family: "Oswald", sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 36px;
+      color: #212121;
+    }
+  }
+
+  .benefits-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+
+    mat-card {
+      width: 300px;
+      padding: 8px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+      mat-card-content {
+        h5 {
+          font-family: "Open Sans", "Helvetica Neue";
+          font-size: 14px;
+          font-weight: bold;
+          margin-bottom: 8px;
+          color: #fe6a01;
+
+          i {
+            margin-right: 8px;
+          }
+        }
+
+        p {
+          font-family: "Open Sans", "Helvetica Neue";
+          font-size: 16px;
+          color: #212121;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  .informations-contracts {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    .accordion-item {
+      padding: 0;
+      margin: 0;
+
+      .accordion-header {
+        border: #fe6a01;
+      }
+
+      .accordion-button {
+        font-family: "Open Sans", "Helvetica Neue";
+        text-transform: uppercase;
+        font-weight: 400;
+
+        &:focus {
+          font-weight: 500;
+          color: #f5f5f5;
+          background-color: rgb(254, 106, 1);
+          box-shadow: 1px 1px 3px rgba(255, 166, 0, 0.37);
+        }
+      }
+    }
+
+    p {
+      margin-top: -16px;
+      text-align: justify;
+      font-size: 14px;
+      font-family: "Open Sans", "Helvetica Neue";
+      line-height: 21px;
+    }
+
+    .btn-term {
+      align-items: left;
+      font-family: "Open Sans", "Helvetica Neue";
+      color: #f5f5f5;
+      background-color: #fe6a01;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+      &:hover {
+        background-color: #d3a01f;
+      }
+    }
+  }
+}

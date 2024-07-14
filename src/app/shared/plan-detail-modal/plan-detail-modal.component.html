@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>
+  <i [class]="planIcon"></i>
+  {{ planTitle }}
+</h2>
+<mat-dialog-content>
+  <p>{{ planDescription }}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button mat-raised-button color="primary" (click)="navigateToRegister()">Associe-se</button>
+</mat-dialog-actions>

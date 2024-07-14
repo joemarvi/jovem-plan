@@ -3,81 +3,34 @@
 
   <div class="container">
     <h2>Como tudo começou?</h2>
-      <p> A história da Jovem Plan é uma narrativa inspiradora de paixão pelo
-        futebol e comprometimento comunitário, iniciada em 2017 pelo presidente
-        Raphael Araújo. Fundada inicialmente como uma ideia compartilhada entre um
-        grupo de amigos apaixonados pelo esporte, a Jovem Plan começou sua jornada
-        humildemente, com apenas os familiares dos jogadores como seus primeiros e
-        mais fervorosos torcedores.
-      </p>
-
-      <p> O clube teve seu início modesto no campo society do Jardim Roriz, um
-        espaço que serviu não apenas como local de treinamento e competição, mas
-        também como um ponto de encontro para a comunidade local. Nos primeiros
-        anos, a Jovem Plan focou em estabelecer uma base sólida de apoio e em
-        desenvolver suas habilidades e estratégias dentro das competições amadoras
-        de futebol em Planaltina-DF.
-      </p>
+    <p>A história da Jovem Plan é uma narrativa inspiradora de paixão pelo futebol e comprometimento comunitário, iniciada em 2017 pelo presidente Raphael Araújo. Fundada inicialmente como uma ideia compartilhada entre um grupo de amigos apaixonados pelo esporte, a Jovem Plan começou sua jornada humildemente, com apenas os familiares dos jogadores como seus primeiros e mais fervorosos torcedores.</p>
+    <p>O clube teve seu início modesto no campo society do Jardim Roriz, um espaço que serviu não apenas como local de treinamento e competição, mas também como um ponto de encontro para a comunidade local. Nos primeiros anos, a Jovem Plan focou em estabelecer uma base sólida de apoio e em desenvolver suas habilidades e estratégias dentro das competições amadoras de futebol em Planaltina-DF.</p>
 
     <h2>Nossa Proposta</h2>
-    <div class="row align-items-text-center">
+    <div class="row align-items-center">
       <div class="col-sm-4">
         <mat-card>
           <mat-icon><i class="fa-solid fa-face-smile-wink"></i></mat-icon>
           <div class="text-destaque">
             <h3>O que preservamos ?</h3>
             <ul>
-              <li><i class="fa-solid fa-check"></i> Comprometimento e
-                compromisso</li>
-              <li><i class="fa-solid fa-check"></i> Integridade e ética
-                esportiva</li>
+              <li><i class="fa-solid fa-check"></i> Comprometimento e compromisso</li>
+              <li><i class="fa-solid fa-check"></i> Integridade e ética esportiva</li>
               <li><i class="fa-solid fa-check"></i> Respeito e inclusão</li>
-              <li><i class="fa-solid fa-check"></i> Excelência em gestão e
-                organização</li>
+              <li><i class="fa-solid fa-check"></i> Excelência em gestão e organização</li>
             </ul>
           </div>
         </mat-card>
       </div>
-      <div class="col-sm-8"> <p> Com o passar do tempo e através do esforço
-          dedicado de seus jogadores,
-          treinadores e dirigentes, a Jovem Plan viu seu número de torcedores
-          crescer
-          exponencialmente. Esse crescimento não foi apenas em quantidade, mas
-          também
-          em qualidade, com a comunidade reconhecendo o compromisso do clube não
-          apenas com o esporte, mas também com os valores fundamentais de
-          integridade,
-          respeito e inclusão.</p>
-
-        <p> O presidente Raphael Araújo desempenhou um papel crucial ao longo
-          desse
-          processo, liderando não apenas como administrador, mas também como um
-          exemplo de dedicação e liderança para seus colegas e para a comunidade
-          em
-          geral. Sob sua orientação, a Jovem Plan expandiu suas atividades além
-          do
-          campo, envolvendo-se em iniciativas comunitárias e projetos
-          educacionais
-          que
-          visam impactar positivamente a juventude local.</p>
+      <div class="col-sm-8">
+        <h3>Com o passar do tempo...</h3>
+        <p>Com o passar do tempo e através do esforço dedicado de seus jogadores, treinadores e dirigentes, a Jovem Plan viu seu número de torcedores crescer exponencialmente. Esse crescimento não foi apenas em quantidade, mas também em qualidade, com a comunidade reconhecendo o compromisso do clube não apenas com o esporte, mas também com os valores fundamentais de integridade, respeito e inclusão.</p>
+        <p>O presidente Raphael Araújo desempenhou um papel crucial ao longo desse processo, liderando não apenas como administrador, mas também como um exemplo de dedicação e liderança para seus colegas e para a comunidade em geral. Sob sua orientação, a Jovem Plan expandiu suas atividades além do campo, envolvendo-se em iniciativas comunitárias e projetos educacionais que visam impactar positivamente a juventude local.</p>
       </div>
     </div>
 
     <h2>Reconhecimento e Organização</h2>
-    <p> Hoje, a Jovem Plan é uma figura respeitada no cenário esportivo de
-      Planaltina-DF, competindo com sucesso nos campeonatos amadores locais e
-      ampliando continuamente sua base de apoio. O clube não só celebra suas
-      conquistas esportivas, como também continua a promover valores de
-      desenvolvimento local e excelência em gestão esportiva.
-
-      O caminho até aqui não foi isento de desafios, mas cada obstáculo
-      enfrentado
-      fortaleceu o espírito da Jovem Plan, consolidando-a não apenas como uma
-      equipe de futebol, mas como uma parte vital e vibrante da comunidade de
-      Planaltina-DF. A história da Jovem Plan é um testemunho do poder
-      unificador
-      do esporte e da determinação de indivíduos comprometidos em fazer a
-      diferença onde quer que estejam.</p>
+    <p>Hoje, a Jovem Plan é uma figura respeitada no cenário esportivo de Planaltina-DF, competindo com sucesso nos campeonatos amadores locais e ampliando continuamente sua base de apoio. O clube não só celebra suas conquistas esportivas, como também continua a promover valores de desenvolvimento local e excelência em gestão esportiva. O caminho até aqui não foi isento de desafios, mas cada obstáculo enfrentado fortaleceu o espírito da Jovem Plan, consolidando-a não apenas como uma equipe de futebol, mas como uma parte vital e vibrante da comunidade de Planaltina-DF. A história da Jovem Plan é um testemunho do poder unificador do esporte e da determinação de indivíduos comprometidos em fazer a diferença onde quer que estejam.</p>
   </div>
 
   <mat-card-header class="mat-card-header-centered">
@@ -87,18 +40,25 @@
   <div class="timeline">
     <div class="timeline-item" *ngFor="let event of events">
       <div class="timeline-year">{{ event.year }}</div>
-      <button class="timeline-dot" title="acontecimento"
-        (click)="toggleAccordion(event)"></button>
+      <button class="timeline-dot" title="acontecimento" (click)="toggleAccordion(event)"></button>
     </div>
     <div class="timeline-line"></div>
   </div>
 
   <div class="accordion" *ngIf="selectedEvent">
-    <mat-card>
-      <img [src]="selectedEvent.image" class="event-image">
-      <h3>{{ selectedEvent.title }}</h3>
-      <p class="event-date">{{ selectedEvent.date }}</p>
-      <p class="event-description">{{ selectedEvent.description }}</p>
+    <mat-card style="background-color: #F2F3F3; padding: 0; width: 90%;">
+      <div class="row align-items-start">
+        <div class="col-sm-6" style="padding: 0;">
+          <img [src]="selectedEvent.image" class="event-image">
+        </div>
+        <div class="col-sm-6">
+          <div class="event-details">
+            <h3 style="margin-top: 16px; text-transform: uppercase; font-weight: 600; color: #272727; font-size: 20px;">{{ selectedEvent.title }}</h3>
+            <p style="font-weight: 400; color: #FE6A01; font-size: 20px; padding: 0 12px;" class="event-date">{{ selectedEvent.date }}</p>
+            <p style="font-family: open sans, helvetica neue; padding: 0 12px;" class="event-description">{{ selectedEvent.description }}</p>
+          </div>
+        </div>
+      </div>
     </mat-card>
   </div>
 </div>

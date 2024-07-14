@@ -1,0 +1,28 @@
+mat-tab-group {
+  margin-top: 90px;
+}
+
+.tab-label {
+  text-transform: uppercase;
+  font-family: 'Fjalla One', sans-serif;
+  color: #FE6B01;
+}
+
+.mat-tab-label {
+  font-size: 14px; /* Opcional: ajuste o tamanho da fonte conforme necessário */
+}
+
+.mat-tab-label-active {
+  color: #FE6B01 !important;
+}
+.mat-mdc-tab-group, .mat-mdc-tab-nav-bar {
+--mdc-tab-indicator-active-indicator-color: orange !important;
+--mat-tab-header-disabled-ripple-color: orange !important;
+--mat-tab-header-pagination-icon-color: orange !important;
+--mat-tab-header-active-ripple-color: orange !important;
+--mat-tab-header-inactive-ripple-color: orange !important;
+--mat-tab-header-inactive-focus-label-text-color: orange !important;
+--mat-tab-header-inactive-hover-label-text-color: orange !important;
+--mat-tab-header-active-focus-indicator-color: orange !important;
+--mat-tab-header-active-hover-indicator-color: #orange !important;
+}

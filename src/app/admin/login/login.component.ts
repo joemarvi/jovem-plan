@@ -6,8 +6,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { Router, RouterLink } from '@angular/router';
-import { User } from '../../interfaces/user';
-import { UserService } from '../../services/user.service';
+import { Associete } from '../../interfaces/associete';
+import { AssocietesService } from '../../services/associetes.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   standalone: true,
@@ -27,14 +28,16 @@ import { UserService } from '../../services/user.service';
 })
 export class LoginComponent {
   loginForm: FormGroup;
+  errorMessage: string = '';
 
   constructor(
     private fb: FormBuilder,
-    private userService: UserService,
+    private associetesService: AssocietesService,
+    private authService: AuthService,
     private router: Router
   ) {
     this.loginForm = this.fb.group({
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
   }
@@ -43,19 +46,13 @@ export class LoginComponent {
     const email = this.loginForm.get('email')?.value;
     const password = this.loginForm.get('password')?.value;
 
-    this.userService.getUsers().subscribe((users: User[]) => {
-      const user = users.find(u => u.email === email && u.password === password);
-      if (user) {
-        localStorage.setItem('currentUser', JSON.stringify(user));
-        if (user.profilePerfil === 'administrator') {
-          this.router.navigate(['/dash-admin']);
-        } else if (user.profilePerfil === 'user') {
-          this.router.navigate(['/dash-admin']);
-        } else {
-          alert('Perfil não definido.');
-        }
+    this.associetesService.getAssocietes().subscribe((associetes: Associete[]) => {
+      const associete = associetes.find(u => u.email === email && u.password === password);
+      if (associete) {
+        this.authService.login(associete);
+        this.router.navigate(['/partner-admin']);
       } else {
-        alert('Usuário ou senha incorretos');
+        this.errorMessage = 'Usuário ou senha incorretos';
       }
     });
   }

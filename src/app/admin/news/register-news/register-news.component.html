@@ -1,0 +1,52 @@
+<div class="container-fluid d-flex justify-content-center align-items-center vh-100">
+  <mat-card class="register-news">
+    <mat-card-title>Formulário Cadastro de Notícias</mat-card-title>
+    <mat-card-subtitle>Para cadastrar a notícia, preencha todos os dados</mat-card-subtitle>
+    <form [formGroup]="registerNewsForm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="half-width">
+          <mat-label>Título Notícia</mat-label>
+          <input matInput type="text" formControlName="titleNews" placeholder="Informe o título da notícia" required>
+        </mat-form-field>
+
+        <div class="half-width">
+          <label for="image">Imagem da Notícia</label>
+          <input type="file" id="image" (change)="onFileChange($event)" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Conteúdo Notícia</mat-label>
+          <textarea matInput formControlName="content" placeholder="Insira o conteúdo da notícia" rows="6" required></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="half-width">
+          <mat-label>Data Publicação</mat-label>
+          <input matInput type="date" formControlName="datePublished" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="half-width">
+          <mat-label>Categoria</mat-label>
+          <select matNativeControl formControlName="category" required>
+            <option value="" disabled selected>Selecione a categoria</option>
+            <option value="Jogos">Jogos</option>
+            <option value="Resultados">Resultados</option>
+            <option value="Últimas">Últimas</option>
+            <option value="Publicidade">Publicidade</option>
+            <option value="Competições">Competições</option>
+            <option value="Diversas">Diversas</option>
+            <option value="Parceiros">Parceiros</option>
+          </select>
+        </mat-form-field>
+      </div>
+
+      <mat-card-actions class="button-row">
+        <button class="send" mat-raised-button color="primary" type="submit">Continuar</button>
+        <button class="canc" mat-raised-button (click)="onCancel()" type="button">Cancelar</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>

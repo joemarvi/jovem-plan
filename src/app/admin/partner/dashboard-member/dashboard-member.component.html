@@ -1,0 +1,83 @@
+<div class="container-fluid">
+  <h5>Fortalecendo Laços. Agregando Valores!</h5>
+  <h1>Recompense sua Paixão<b>.</b></h1>
+
+  <button mat-raised-button (click)="logout()">Sair</button>
+
+  <div *ngIf="loggedInAssociete" class="dashboard-container mt-5">
+    <mat-card class="member-plan-card">
+      <mat-card-title>{{ loggedInAssociete.nomeCompleto }}</mat-card-title>
+      <mat-card-content>
+        <div class="member-info">
+          <img class="profile-photo" [src]="loggedInAssociete.photo" alt="Profile Photo">
+          <div class="plan-details">
+            <div style="text-transform: capitalize;"><strong>Plano:</strong> {{ loggedInAssociete.planType }}<i class="fa-solid fa-star"></i></div>
+            <div><strong>Associado Nº:</strong> {{ loggedInAssociete.id }}</div>
+            <div><strong>Desde:</strong> {{ loggedInAssociete.dataRegistro | date }}</div>
+            <div><strong>Validade do Contrato:</strong> {{ loggedInAssociete.contractValidity | date : 'dd/MM/yyyy' }}</div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="title-page">
+    <h1>Meus Benefícios</h1>
+  </div>
+
+  <div class="benefits-container">
+    <mat-card *ngFor="let benefit of benefits">
+      <mat-card-content>
+        <h5><i class="{{ benefit.icon }}"></i> {{ benefit.title }}</h5>
+        <p>{{ benefit.description }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="title-page">
+    <h1>Termos e Contratos</h1>
+  </div>
+
+  <div class="container">
+    <div class="informations-contracts">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+              aria-expanded="false" aria-controls="flush-collapseOne">
+              Termo de Utilização
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <p>Os planos de Sócio Torcedor Jovem Plan são destinados a torcedores que desejam apoiar o clube e usufruir de benefícios exclusivos. A adesão garante acesso preferencial a ingressos, descontos em produtos oficiais e participação em eventos do clube. A validade dos planos é anual, com renovação automática salvo cancelamento pelo associado. Os valores e benefícios podem ser alterados a critério do clube, sendo comunicado previamente aos sócios. O cancelamento pode ser solicitado a qualquer momento, sem reembolso de valores pagos anteriormente.</p>
+              <button class="btn-term" mat-raised-button>Termo de Ciência</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+              aria-expanded="false" aria-controls="flush-collapseTwo">
+              Informações de Contrato
+            </button>
+          </h2>
+
+          <div id="flush-collapseTwo" class="accordion-collapse collapse"
+            aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <p>O contrato de Sócio Torcedor Jovem Plan estabelece as condições de adesão, direitos e deveres dos associados. Ao se inscrever, o torcedor concorda em pagar uma taxa anual e usufruir de benefícios como acesso preferencial a ingressos, descontos em produtos oficiais e participação em eventos exclusivos. O contrato é válido por um ano, com renovação automática, e pode ser cancelado a qualquer momento pelo associado, sem reembolso dos valores pagos. Alterações nos benefícios ou valores serão comunicadas previamente.</p>
+              <button class="btn-term" mat-raised-button>Download Contrato</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

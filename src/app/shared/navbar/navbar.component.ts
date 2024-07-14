@@ -63,7 +63,7 @@ export class NavbarComponent implements OnInit {
 
   navigateToForm() {
     this.closeModal();
-    this.router.navigate(['/register-partner']);
+    this.router.navigate(['/partner-dash']);
   }
 
   navigateToHome() {

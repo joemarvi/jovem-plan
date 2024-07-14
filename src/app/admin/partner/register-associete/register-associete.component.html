@@ -1,0 +1,144 @@
+<div class="container-fluid">
+  <h5>Fortalecendo Laços. Agregando Valores!</h5>
+  <h1>Orgulho em fazer parte<b>.</b></h1>
+
+  <div class="container">
+    <mat-card *ngIf="currentStep === 1">
+      <mat-card-content>
+        <mat-card-title><i class="fa-solid fa-address-book"></i>Cadastro de Associados</mat-card-title>
+        <div class="separate"></div>
+      </mat-card-content>
+
+      <mat-card-content>
+        <form [formGroup]="registerAssocieteForm" (ngSubmit)="onSubmitStep1()" class="form-container mt-3" ngNativeValidate>
+          <mat-card-subtitle>
+            Preencha corretamente todas as informações <i class="fa-solid fa-spell-check"></i>
+          </mat-card-subtitle>
+
+          <div class="row mt-2">
+            <div class="col-sm-6">
+              <div class="form-group mb-4">
+                <h2>Selecione uma Foto</h2>
+                <input type="file" formControlName="photo" id="photo" class="form-control" required>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group mb-4">
+                <h2>Nome Completo</h2>
+                <input type="text" formControlName="nomeCompleto" id="nomeCompleto" class="form-control" placeholder="Informe seu nome completo" required>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <div class="form-group mb-4">
+                <h2>CPF</h2>
+                <input type="text" formControlName="cpf" id="cpf" class="form-control" placeholder="Informe seu CPF" required>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <div class="form-group mb-4">
+                <h2>Telefone</h2>
+                <input type="text" formControlName="telefone" id="telefone" class="form-control" placeholder="Informe seu telefone" required>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group mb-4">
+                <h2>E-mail</h2>
+                <input type="email" formControlName="email" id="email" class="form-control" placeholder="Informe seu e-mail" required>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <div class="form-group mb-4">
+                <h2>CEP</h2>
+                <input type="text" formControlName="cep" id="cep" class="form-control" placeholder="Informe seu CEP" required>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group mb-4">
+                <h2>Endereço</h2>
+                <input type="text" formControlName="endereco" id="endereco" class="form-control" placeholder="Avenida Marechal, Rua" required>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <div class="form-group mb-4">
+                <h2>Nº</h2>
+                <input type="text" formControlName="numeroEndereco" id="numeroEndereco" class="form-control" placeholder="Nº 145" required>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="form-group mb-4">
+                <h2>Cidade</h2>
+                <input type="text" formControlName="cidade" id="cidade" class="form-control" placeholder="Informe sua cidade" required>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="form-group mb-4">
+                <h2>Selecione o Plano</h2>
+                <select formControlName="planType" class="form-control" required>
+                  <option value="" disabled selected>Selecione o Plano</option>
+                  <option value="plano-individual">Plano Individual</option>
+                  <option value="plano-familia-casal">Plano Família/Casal</option>
+                  <option value="plano-premium-match">Plano Premium Match</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="form-group mb-4">
+                <h2>Data de Registro</h2>
+                <input type="date" formControlName="dataRegistro" id="dataRegistro" class="form-control" required>
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+              <mat-card-actions class="mt-4">
+                <button type="submit" mat-raised-button>Continuar</button>
+              </mat-card-actions>
+            </div>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card *ngIf="currentStep === 2">
+      <mat-card-content>
+        <mat-card-title><i class="fa-solid fa-lock"></i>Criação de Senha</mat-card-title>
+        <div class="separate"></div>
+      </mat-card-content>
+
+      <mat-card-content>
+        <form [formGroup]="passwordForm" (ngSubmit)="onSubmitStep2()" class="form-container mt-3">
+          <mat-card-subtitle>
+            Crie uma senha para acessar o portal do associado <i class="fa-solid fa-key"></i>
+          </mat-card-subtitle>
+
+          <div class="row mt-2">
+            <div class="col-sm-6">
+              <div class="form-group mb-4">
+                <h2>Senha</h2>
+                <input type="password" formControlName="password" id="password" class="form-control" placeholder="Crie sua senha" required>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group mb-4">
+                <h2>Confirmar Senha</h2>
+                <input type="password" formControlName="confirmPassword" id="confirmPassword" class="form-control" placeholder="Confirme sua senha" required>
+              </div>
+            </div>
+          </div>
+          <mat-card-actions class="mt-4">
+            <button type="submit" mat-raised-button>Salvar e Continuar</button>
+          </mat-card-actions>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

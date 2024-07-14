@@ -3,7 +3,6 @@
   padding: 20px;
   font-family: 'Roboto', sans-serif;
 
-
   h1 {
     text-align: center;
     text-transform: uppercase;
@@ -23,6 +22,7 @@
     font-size: 1.2em;
     margin-top: 20px;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   p {
@@ -67,7 +67,7 @@
     padding: 16px;
     width: 100%;
     height: auto;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     background-color: #ff6600;
 
     mat-icon {
@@ -154,28 +154,56 @@
       background-color: #fff;
       max-width: 800px;
       width: 100%;
+      background-color: #53535388;
 
-      img.event-image {
-        width: 100%;
-        height: auto;
+      .event-details {
+        text-align: left;
+
+        h3 {
+          text-transform: uppercase;
+          font-family: "Open Sans", "Helvetica Neue";
+          color: #ffffff;
+        }
+
+        .event-date {
+          font-weight: bold;
+          font-size: 14px;
+          font-style: italic;
+          margin-bottom: 10px;
+          color: #c4c4c4;
+        }
+
+        .event-description {
+          font-size: 16px;
+          line-height: 1.6;
+          color: #585757;
+        }
+      }
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .col-sm-4,
+      .col-sm-8 {
+        padding: 10px;
       }
 
-      h3 {
-        margin-top: 20px;
-        color: #FE6A01;
-      }
+      .col-sm-6 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-      .event-date {
-        font-weight: 500;
-        background-color: orange;
-        color: white;
-        padding: 5px 10px;
-        margin: 10px 0;
-        border-radius: 5px;
-      }
-
-      .event-description {
-        margin-bottom: 0;
+        img.event-image {
+          width: 100%;
+          height: auto;
+          max-width: 700px;
+          max-height: 400px;
+          object-fit: cover;
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.342);
+        }
       }
     }
   }
